@@ -1,0 +1,293 @@
+fileFormatVersion: 2
+guid: 172c60b7e17798147b3906a5569a3d1d
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box005
+    100002: Floor
+    100004: Object020
+    100006: Object022
+    100008: Object023
+    100010: Object024
+    100012: Object025
+    100014: Object027
+    100016: Object028
+    100018: Object029
+    100020: Object030
+    100022: Object031
+    100024: Object032
+    100026: Object033
+    100028: Object034
+    100030: Object035
+    100032: Object036
+    100034: Object037
+    100036: Object038
+    100038: Object039
+    100040: Object040
+    100042: Object041
+    100044: Object042
+    100046: Object043
+    100048: Object044
+    100050: Object045
+    100052: Object046
+    100054: Speaker
+    100056: SpeakerBase
+    100058: //RootNode
+    400000: Box005
+    400002: Floor
+    400004: Object020
+    400006: Object022
+    400008: Object023
+    400010: Object024
+    400012: Object025
+    400014: Object027
+    400016: Object028
+    400018: Object029
+    400020: Object030
+    400022: Object031
+    400024: Object032
+    400026: Object033
+    400028: Object034
+    400030: Object035
+    400032: Object036
+    400034: Object037
+    400036: Object038
+    400038: Object039
+    400040: Object040
+    400042: Object041
+    400044: Object042
+    400046: Object043
+    400048: Object044
+    400050: Object045
+    400052: Object046
+    400054: Speaker
+    400056: SpeakerBase
+    400058: //RootNode
+    2100000: 'Material #11'
+    2100002: 'Material #10'
+    2100004: 'Material #7'
+    2100006: 'Material #5'
+    2100008: 'Material #2'
+    2300000: Box005
+    2300002: Floor
+    2300004: Object020
+    2300006: Object022
+    2300008: Object023
+    2300010: Object024
+    2300012: Object025
+    2300014: Object027
+    2300016: Object028
+    2300018: Object029
+    2300020: Object030
+    2300022: Object031
+    2300024: Object032
+    2300026: Object033
+    2300028: Object034
+    2300030: Object035
+    2300032: Object036
+    2300034: Object037
+    2300036: Object038
+    2300038: Object039
+    2300040: Object040
+    2300042: Object041
+    2300044: Object042
+    2300046: Object043
+    2300048: Object044
+    2300050: Object045
+    2300052: Object046
+    2300054: Speaker
+    2300056: SpeakerBase
+    3300000: Box005
+    3300002: Floor
+    3300004: Object020
+    3300006: Object022
+    3300008: Object023
+    3300010: Object024
+    3300012: Object025
+    3300014: Object027
+    3300016: Object028
+    3300018: Object029
+    3300020: Object030
+    3300022: Object031
+    3300024: Object032
+    3300026: Object033
+    3300028: Object034
+    3300030: Object035
+    3300032: Object036
+    3300034: Object037
+    3300036: Object038
+    3300038: Object039
+    3300040: Object040
+    3300042: Object041
+    3300044: Object042
+    3300046: Object043
+    3300048: Object044
+    3300050: Object045
+    3300052: Object046
+    3300054: Speaker
+    3300056: SpeakerBase
+    4300000: Floor
+    4300002: Box005
+    4300004: SpeakerBase
+    4300006: Speaker
+    4300008: Object020
+    4300010: Object022
+    4300012: Object023
+    4300014: Object024
+    4300016: Object025
+    4300018: Object027
+    4300020: Object028
+    4300022: Object029
+    4300024: Object030
+    4300026: Object031
+    4300028: Object032
+    4300030: Object033
+    4300032: Object034
+    4300034: Object035
+    4300036: Object036
+    4300038: Object037
+    4300040: Object038
+    4300042: Object039
+    4300044: Object040
+    4300046: Object041
+    4300048: Object042
+    4300050: Object043
+    4300052: Object044
+    4300054: Object045
+    4300056: Object046
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #10'
+    second: {fileID: 2100000, guid: dcc81d8011f03fd4f9d1ccb20efde8c8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #11'
+    second: {fileID: 2100000, guid: 2172ab8d31d9cd14ba5d8f4b72cf02d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #2'
+    second: {fileID: 2100000, guid: 1895d3bf8a5a8ca49a654af7996bb2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #5'
+    second: {fileID: 2100000, guid: 303e313c70c20424c88544a54e2e7ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #7'
+    second: {fileID: 2100000, guid: af4a4b32804b027498011d646c33a192, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: DoorwayTEXT
+    second: {fileID: 2800000, guid: 396e82ed74211d44a950d5ac83ce956a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FloorTEXT
+    second: {fileID: 2800000, guid: b8998d220787a86438a3c6975a1d5d89, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LogsTEXT
+    second: {fileID: 2800000, guid: d6e8db6fac4515f42ae96ce04db7be28, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerBaseTEXT
+    second: {fileID: 2800000, guid: c32e2834500f20c479134f5e2ffaa26d, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SpeakerHeadTEXT
+    second: {fileID: 2800000, guid: 8fb8cf531d0e46740b494ae210311ed5, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.045
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
