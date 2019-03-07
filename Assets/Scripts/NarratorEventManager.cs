@@ -6,28 +6,10 @@ public class NarratorEventManager : MonoBehaviour
 {
     public static NarratorEventManager Instance;
 
-    public List<NarrationObject> NarrationObjects = new List<NarrationObject>();
-    public List<GameObject> EventObjects = new List<GameObject>();
-
-    public NarrationObject CurrentEvent
-    {
-        get
-        {
-            return NarrationObjects[currentEventIndex];
-        }
-    }
-
-    public GameObject CurrentObject
-    {
-        get
-        {
-            return EventObjects[currentEventIndex];
-        }
-    }
+    public NarratorEventGraph narratorGraph;
 
     public AudioSource audioSource;
-    private int currentEventIndex = -1;
-    private GameObject eventObject;
+    private Coroutine failTimerRoutine;
 
     void Start() {
         if (Instance == null) Instance = this;
@@ -36,26 +18,31 @@ public class NarratorEventManager : MonoBehaviour
             return;
         }
 
-        NextEvent();
+        narratorGraph = (NarratorEventGraph)narratorGraph.Copy();
+        narratorGraph.current = (NarratorBaseNode)narratorGraph.nodes[0];
     }
 
-    public void NextEvent() {
-        if (currentEventIndex >= 0 && CurrentEvent.DisableOnComplete)
-            CurrentObject.SetActive(false);
-        currentEventIndex++;
-        if (currentEventIndex >= NarrationObjects.Count) return;
-        if (CurrentEvent.Audio)
-            audioSource.PlayOneShot(CurrentEvent.Audio);
-        if (CurrentObject) {
-            CurrentObject.SetActive(true);
-        } else {
-            StartCoroutine(WaitForNextEvent(CurrentEvent.WaitUntilNext));
-        }
+    public void FailEvent() {
+        ((NarratorNode)narratorGraph.current).Fail();
     }
 
-    IEnumerator WaitForNextEvent(float time) {
-        yield return new WaitUntil(() => !audioSource.isPlaying);
+    public void PassEvent() {
+        ((NarratorNode)narratorGraph.current).Pass();
+    }
+    
+    public void StartFailTimer(float time) {
+        failTimerRoutine = StartCoroutine(failTimer(time));
+    }
+
+    public void StopFailTimer() {
+        StopCoroutine(failTimerRoutine);
+    }
+
+    IEnumerator failTimer(float time) {
         yield return new WaitForSeconds(time);
-        NextEvent();
+        if (((NarratorNode)narratorGraph.current).SimonSaid)
+            FailEvent();
+        else
+            PassEvent();
     }
 }

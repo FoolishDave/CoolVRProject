@@ -6,7 +6,8 @@ using UnityEngine;
 public class NarrationObject : ScriptableObject
 {
     public string EventName = "New Event";
-    public AudioClip Audio;
+    public List<AudioClip> Audio = new List<AudioClip>();
     public bool DisableOnComplete;
+    public GameObject NarrationGameObject;
     public float WaitUntilNext = 0f;
 }

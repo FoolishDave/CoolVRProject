@@ -1,0 +1,916 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b7aef648f0f12e43aa0b3017bb7bb9c, type: 3}
+  m_Name: NarratorEventGraph
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: 114799050880165726}
+  - {fileID: 114455142052951212}
+  - {fileID: 114641394915880286}
+  - {fileID: 114411740337108234}
+  - {fileID: 114326521173883378}
+  - {fileID: 114260910403780186}
+  - {fileID: 114780495945983250}
+  - {fileID: 114829188196114580}
+  - {fileID: 114014799901649124}
+  - {fileID: 114456475934697936}
+  - {fileID: 114140008530854426}
+  - {fileID: 114425818227026226}
+  - {fileID: 0}
+--- !u!114 &114014799901649124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: -88}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114014799901649124}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: fail
+        node: {fileID: 114326521173883378}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114780495945983250}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114014799901649124}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114014799901649124}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Simon Failure
+  Audio:
+  - {fileID: 8300000, guid: f2a89a7106cc03b4cb666f82c8893032, type: 3}
+  - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
+  - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
+  - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 0
+--- !u!114 &114094331203350662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32ef86e1b73c7d642acaa1b75f66bbbb, type: 3}
+  m_Name: State Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 490, y: -182}
+  ports:
+    keys:
+    - enter
+    - exit
+    values:
+    - _fieldName: enter
+      _node: {fileID: 114094331203350662}
+      _typeQualifiedName: XNode.Examples.StateGraph.StateNode+Empty, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: exit
+      _node: {fileID: 114094331203350662}
+      _typeQualifiedName: XNode.Examples.StateGraph.StateNode+Empty, Assembly-CSharp,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  enter: {}
+  exit: {}
+--- !u!114 &114140008530854426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: 456}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114140008530854426}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: fail
+        node: {fileID: 114260910403780186}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114829188196114580}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114140008530854426}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114140008530854426}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Non Simon Failure
+  Audio:
+  - {fileID: 8300000, guid: 2c900738c1e5c794885d91a4f0701c3d, type: 3}
+  - {fileID: 8300000, guid: 35ca7fadaf60800478ea20600d664783, type: 3}
+  - {fileID: 8300000, guid: edccf6f18ad65504cb22f1d9c4940c24, type: 3}
+  - {fileID: 8300000, guid: 0d2ee8e648757b34b8d638cdea74b23f, type: 3}
+  - {fileID: 8300000, guid: 87298d8640e2c8841aa78518424716a6, type: 3}
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 0
+--- !u!114 &114260910403780186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 216}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114260910403780186}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Events 2
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114260910403780186}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114425818227026226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114260910403780186}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114140008530854426}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Red Block
+  Audio:
+  - {fileID: 8300000, guid: cf493f0c49ea7bf4f874cf706369e0cc, type: 3}
+  eventObjectTag: RedBlock
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 10
+--- !u!114 &114326521173883378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: -328}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114326521173883378}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Events 0
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114326521173883378}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114456475934697936}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114326521173883378}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114014799901649124}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Simon Red Block
+  Audio:
+  - {fileID: 8300000, guid: 1dc8a6e8dd6208949bd18184146ed6c2, type: 3}
+  eventObjectTag: RedBlock
+  DisableOnComplete: 0
+  SimonSaid: 1
+  WaitUntilNext: 0
+  EndAfter: 10
+--- !u!114 &114411740337108234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a4a738a6049620429e1d7063752d59a, type: 3}
+  m_Name: Narrator List Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -72, y: -88}
+  ports:
+    keys:
+    - Entry
+    - Events
+    - Events 0
+    - Events 1
+    - Events 2
+    - Events 3
+    values:
+    - _fieldName: Entry
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: pass
+        node: {fileID: 114641394915880286}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114641394915880286}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114456475934697936}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114456475934697936}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114014799901649124}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114014799901649124}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114425818227026226}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114425818227026226}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114140008530854426}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114140008530854426}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Events
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: Events 0
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114326521173883378}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Events 1
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114780495945983250}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Events 2
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114260910403780186}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+    - _fieldName: Events 3
+      _node: {fileID: 114411740337108234}
+      _typeQualifiedName: Empty[], Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114829188196114580}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
+  Events: []
+--- !u!114 &114425818227026226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: 216}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114425818227026226}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: pass
+        node: {fileID: 114260910403780186}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114829188196114580}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114425818227026226}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114425818227026226}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Non Simon Success
+  Audio: []
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 0.1
+--- !u!114 &114455142052951212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -536, y: -88}
+  ports:
+    keys:
+    - pass
+    - previousEvent
+    - fail
+    values:
+    - _fieldName: pass
+      _node: {fileID: 114455142052951212}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114641394915880286}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousEvent
+      _node: {fileID: 114455142052951212}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: nextEvent
+        node: {fileID: 114799050880165726}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114799050880165726}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114799050880165726}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114455142052951212}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114641394915880286}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Welcome
+  Audio:
+  - {fileID: 8300000, guid: 57059c479782d65418a3260d50e91ba0, type: 3}
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 7.05
+--- !u!114 &114456475934697936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 1048, y: -328}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114456475934697936}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: pass
+        node: {fileID: 114326521173883378}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114780495945983250}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114456475934697936}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114456475934697936}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Simon Success
+  Audio: []
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 0.1
+--- !u!114 &114641394915880286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -312, y: -88}
+  ports:
+    keys:
+    - pass
+    - previousEvent
+    - fail
+    values:
+    - _fieldName: pass
+      _node: {fileID: 114641394915880286}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousEvent
+      _node: {fileID: 114641394915880286}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: nextEvent
+        node: {fileID: 114455142052951212}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114455142052951212}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114455142052951212}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114641394915880286}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Entry
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Intro
+  Audio:
+  - {fileID: 8300000, guid: f59f4fafea5a9dc4aa332c0c4a8238ae, type: 3}
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 6.345
+--- !u!114 &114780495945983250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: -56}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114780495945983250}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Events 1
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114780495945983250}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114456475934697936}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114780495945983250}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114014799901649124}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Simon Donut Void
+  Audio:
+  - {fileID: 8300000, guid: 5849bedb81dd228469544dfc2e4c74ef, type: 3}
+  eventObjectTag: DonutVoid
+  DisableOnComplete: 1
+  SimonSaid: 1
+  WaitUntilNext: 0
+  EndAfter: 10
+--- !u!114 &114799050880165726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -760, y: -88}
+  ports:
+    keys:
+    - pass
+    - previousEvent
+    - fail
+    values:
+    - _fieldName: pass
+      _node: {fileID: 114799050880165726}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114455142052951212}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: previousEvent
+      _node: {fileID: 114799050880165726}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114799050880165726}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114455142052951212}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Intro Delay
+  Audio: []
+  eventObjectTag: 
+  DisableOnComplete: 0
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 1
+--- !u!114 &114829188196114580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
+  m_Name: Narrator Node
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 440, y: 488}
+  ports:
+    keys:
+    - previousEvent
+    - pass
+    - fail
+    values:
+    - _fieldName: previousEvent
+      _node: {fileID: 114829188196114580}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: Events 3
+        node: {fileID: 114411740337108234}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: pass
+      _node: {fileID: 114829188196114580}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114425818227026226}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: fail
+      _node: {fileID: 114829188196114580}
+      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114140008530854426}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  EventName: Donut Void
+  Audio:
+  - {fileID: 8300000, guid: 70af1b68c4d5d3d42abd28698eda653c, type: 3}
+  eventObjectTag: DonutVoid
+  DisableOnComplete: 1
+  SimonSaid: 0
+  WaitUntilNext: 0
+  EndAfter: 10
