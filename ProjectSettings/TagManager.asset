@@ -8,6 +8,8 @@ TagManager:
   - FxTemporaire
   - RedBlock
   - DonutVoid
+  - Donut
+  - BaseCamera
   layers:
   - Default
   - TransparentFX

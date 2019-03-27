@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cfa04964ec85fad4ca7114c8318f47ce
+guid: 1ba992add2311e24bab467cf464e6595
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -8,13 +8,8 @@ ModelImporter:
     2100000: 'Material #6'
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cylinder052
-  externalObjects:
-  - first:
-      type: UnityEngine:Texture2D
-      assembly: UnityEngine.CoreModule
-      name: LampTEXTOP
-    second: {fileID: 2800000, guid: 0926205f1dc89a5408e5ae8441b978e7, type: 3}
+    4300000: Lamp
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -14,8 +14,10 @@ public class NarratorInteractable : MonoBehaviour
         }
     }
 
-    private void Activate() {
-        used = true;
-        onActivate.Invoke();
+    public void Activate() {
+        if (((NarratorNode)NarratorEventManager.Instance.narratorGraph.current).eventObjectTag == gameObject.tag) {
+            used = true;
+            onActivate.Invoke();
+        }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DonutVoid : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision) {
+    private void OnTriggerEnter(Collider collision) {
         if (collision.transform.tag != "Donut") return;
         if (((NarratorNode)NarratorEventManager.Instance.narratorGraph.current).SimonSaid) {
             NarratorEventManager.Instance.PassEvent();

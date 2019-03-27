@@ -35,12 +35,15 @@ public class NarratorNode : NarratorBaseNode
     public void Pass() {
         if (eventObjects)
             eventObjects.SetActive(!DisableOnComplete);
+        NarratorEventManager.Instance.StopFailTimer();
         ((NarratorEventGraph)graph).current = (NarratorBaseNode)GetOutputPort("pass").Connection.node;
     }
 
     public void Fail() {
         if (eventObjects)
             eventObjects.SetActive(!DisableOnComplete);
+        NarratorEventManager.Instance.StopFailTimer();
+        PunishmentManager.Instance.AngerLevel += 1f;
         ((NarratorEventGraph)graph).current = (NarratorBaseNode)GetOutputPort("fail").Connection.node;
     }
 

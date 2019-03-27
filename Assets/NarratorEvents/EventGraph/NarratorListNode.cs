@@ -21,7 +21,7 @@ public class NarratorListNode : NarratorBaseNode {
         }
         int selected = possibleEvents[Random.Range(0, possibleEvents.Count)];
         NarratorBaseNode chosenNode = (NarratorBaseNode)GetOutputPort("Events " + selected.ToString()).Connection.node;
-        GetOutputPort("Events " + selected.ToString()).ClearConnections();
+        //GetOutputPort("Events " + selected.ToString()).ClearConnections();
         ((NarratorEventGraph)graph).current = chosenNode;
     }
 }
