@@ -22,7 +22,6 @@ MonoBehaviour:
   - {fileID: 114140008530854426}
   - {fileID: 114425818227026226}
   - {fileID: 114492684932026152}
-  - {fileID: 0}
   - {fileID: 114737133740749090}
   - {fileID: 114129207158918580}
   - {fileID: 114204234733340020}
@@ -68,6 +67,7 @@ MonoBehaviour:
   - {fileID: 114611076496485342}
   - {fileID: 114184143700186086}
   - {fileID: 114044595109255998}
+  - {fileID: 0}
 --- !u!114 &114005022736043886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +130,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114014799901649124
 MonoBehaviour:
@@ -197,7 +196,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114039559788812032
 MonoBehaviour:
@@ -264,7 +262,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114044595109255998
 MonoBehaviour:
@@ -322,7 +319,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114068460022519196
 MonoBehaviour:
@@ -389,7 +385,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114073158605231818
 MonoBehaviour:
@@ -459,10 +454,9 @@ MonoBehaviour:
   EventName: Pick Up Donut
   Audio:
   - {fileID: 8300000, guid: ec32b43e221bd5e409973c799c9dcfca, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Donut
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114073838821842284
 MonoBehaviour:
@@ -525,7 +519,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114076916783643826
 MonoBehaviour:
@@ -589,7 +582,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114082861412381212
 MonoBehaviour:
@@ -653,10 +645,9 @@ MonoBehaviour:
   EventName: Throw Donut in Void
   Audio:
   - {fileID: 8300000, guid: 41d2b3d12810a544e8d88f6c1db1c295, type: 3}
-  eventObjectTag: 
+  eventObjectTag: DonutVoid
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114094331203350662
 MonoBehaviour:
@@ -759,7 +750,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114129207158918580
 MonoBehaviour:
@@ -823,10 +813,9 @@ MonoBehaviour:
   EventName: Simon Lamp
   Audio:
   - {fileID: 8300000, guid: 20180c7ff8e0fe545813fcc62aafbb70, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Lamp
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114140008530854426
 MonoBehaviour:
@@ -894,7 +883,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114144217532208054
 MonoBehaviour:
@@ -958,10 +946,9 @@ MonoBehaviour:
   EventName: Travel Right
   Audio:
   - {fileID: 8300000, guid: 37e2fd389e9bc584181a33c35a88d7da, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Travel Right
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1
 --- !u!114 &114164032382373526
 MonoBehaviour:
@@ -1028,7 +1015,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114182674888045410
 MonoBehaviour:
@@ -1091,7 +1077,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114184143700186086
 MonoBehaviour:
@@ -1149,7 +1134,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114190738041235514
 MonoBehaviour:
@@ -1213,10 +1197,9 @@ MonoBehaviour:
   EventName: Simon Doorway
   Audio:
   - {fileID: 8300000, guid: daa45db786a9852429dabc37a0413d84, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Doorway
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114200282529737032
 MonoBehaviour:
@@ -1283,10 +1266,9 @@ MonoBehaviour:
   EventName: Travel to frank
   Audio:
   - {fileID: 8300000, guid: bca4ba5c638b94048a693e4347b70095, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Frank Island
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1
 --- !u!114 &114204234733340020
 MonoBehaviour:
@@ -1353,7 +1335,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114213382046630564
 MonoBehaviour:
@@ -1423,10 +1404,9 @@ MonoBehaviour:
   EventName: Stand By Rock
   Audio:
   - {fileID: 8300000, guid: 4e611a5bd073e2a4d9e41c04c8581737, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Rock
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114213909859688438
 MonoBehaviour:
@@ -1489,7 +1469,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114219463427524742
 MonoBehaviour:
@@ -1559,10 +1538,9 @@ MonoBehaviour:
   EventName: Simon Donut
   Audio:
   - {fileID: 8300000, guid: 846377ba0c7262c4db89ad682341edb7, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Donut
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114326521173883378
 MonoBehaviour:
@@ -1629,7 +1607,6 @@ MonoBehaviour:
   eventObjectTag: RedBlock
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114342606154346632
 MonoBehaviour:
@@ -1692,7 +1669,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114347882990250292
 MonoBehaviour:
@@ -1756,10 +1732,9 @@ MonoBehaviour:
   EventName: Do Not Sac
   Audio:
   - {fileID: 8300000, guid: 3d08f3f508c243045a56e2accde77ea5, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Baby
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1
 --- !u!114 &114366982512868074
 MonoBehaviour:
@@ -1826,7 +1801,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114369239575472156
 MonoBehaviour:
@@ -1893,7 +1867,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114369366684106014
 MonoBehaviour:
@@ -1960,7 +1933,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114372735530054666
 MonoBehaviour:
@@ -2027,7 +1999,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114376945792264844
 MonoBehaviour:
@@ -2090,7 +2061,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114425818227026226
 MonoBehaviour:
@@ -2153,7 +2123,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114455142052951212
 MonoBehaviour:
@@ -2223,8 +2192,7 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
-  EndAfter: 7.05
+  EndAfter: 0
 --- !u!114 &114456475934697936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2286,7 +2254,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114492684932026152
 MonoBehaviour:
@@ -2353,7 +2320,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114501827131551548
 MonoBehaviour:
@@ -2416,7 +2382,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114515347056977994
 MonoBehaviour:
@@ -2480,10 +2445,9 @@ MonoBehaviour:
   EventName: Admire Tree
   Audio:
   - {fileID: 8300000, guid: ca20e145b2cc4074c800f9142ce61bc7, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Tree
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114586094110534170
 MonoBehaviour:
@@ -2551,7 +2515,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114593627173161516
 MonoBehaviour:
@@ -2633,10 +2596,9 @@ MonoBehaviour:
   EventName: Travel To Island
   Audio:
   - {fileID: 8300000, guid: bd7510f564161644594b210a805c1ba8, type: 3}
-  eventObjectTag: 
+  eventObjectTag: First Island
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114598515459105576
 MonoBehaviour:
@@ -2699,7 +2661,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114611076496485342
 MonoBehaviour:
@@ -2766,7 +2727,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114641394915880286
 MonoBehaviour:
@@ -2833,8 +2793,7 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
-  EndAfter: 6.345
+  EndAfter: 0
 --- !u!114 &114642545597471250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,7 +2850,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114693973772393082
 MonoBehaviour:
@@ -2958,7 +2916,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114737133740749090
 MonoBehaviour:
@@ -3031,7 +2988,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 5
 --- !u!114 &114759184446739572
 MonoBehaviour:
@@ -3098,7 +3054,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114780249353601638
 MonoBehaviour:
@@ -3162,10 +3117,9 @@ MonoBehaviour:
   EventName: Travel To Big Island
   Audio:
   - {fileID: 8300000, guid: 3c4a4d3e2fff914419f62e1e7f28ffe2, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Big Island
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1
 --- !u!114 &114781385265889488
 MonoBehaviour:
@@ -3228,7 +3182,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114799050880165726
 MonoBehaviour:
@@ -3288,7 +3241,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 1
 --- !u!114 &114876749783914448
 MonoBehaviour:
@@ -3352,7 +3304,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114910945737893516
 MonoBehaviour:
@@ -3409,7 +3360,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0
 --- !u!114 &114915406834096714
 MonoBehaviour:
@@ -3479,10 +3429,9 @@ MonoBehaviour:
   EventName: Accept Donut
   Audio:
   - {fileID: 8300000, guid: e8834598efb4cfd45afce412fb8c1a25, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Accept Donut
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: 10
 --- !u!114 &114920996227386178
 MonoBehaviour:
@@ -3552,10 +3501,9 @@ MonoBehaviour:
   EventName: Travel Right
   Audio:
   - {fileID: 8300000, guid: 37e2fd389e9bc584181a33c35a88d7da, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Travel Right
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1
 --- !u!114 &114984518669444982
 MonoBehaviour:
@@ -3618,7 +3566,6 @@ MonoBehaviour:
   eventObjectTag: 
   DisableOnComplete: 0
   SimonSaid: 0
-  WaitUntilNext: 0
   EndAfter: 0.1
 --- !u!114 &114996949066421758
 MonoBehaviour:
@@ -3694,8 +3641,7 @@ MonoBehaviour:
   EventName: Purple Runes
   Audio:
   - {fileID: 8300000, guid: ef9261f06dd65344bad76df253a19d22, type: 3}
-  eventObjectTag: 
+  eventObjectTag: Purple Runes
   DisableOnComplete: 0
   SimonSaid: 1
-  WaitUntilNext: 0
   EndAfter: -1

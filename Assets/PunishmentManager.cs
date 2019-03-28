@@ -36,10 +36,5 @@ public class PunishmentManager : MonoBehaviour
                 sequence.Play();
             }
         }
-
-        if (!distanceTriggered && Vector3.Distance(Camera.main.transform.position, Vector3.zero) > 60f) {
-            distanceTriggered = true;
-            globalAudioSource.PlayOneShot(distanceClip);
-        }
     }
 }

@@ -9,5 +9,4 @@ public class NarrationObject : ScriptableObject
     public List<AudioClip> Audio = new List<AudioClip>();
     public bool DisableOnComplete;
     public GameObject NarrationGameObject;
-    public float WaitUntilNext = 0f;
 }

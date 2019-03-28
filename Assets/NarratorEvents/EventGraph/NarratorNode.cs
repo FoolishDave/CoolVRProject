@@ -22,7 +22,6 @@ public class NarratorNode : NarratorBaseNode
     public string eventObjectTag;
     public bool DisableOnComplete;
     public bool SimonSaid;
-    public float WaitUntilNext = 0f;
     public float EndAfter = 0f;
 
     private GameObject eventObjects;
@@ -54,7 +53,7 @@ public class NarratorNode : NarratorBaseNode
         Debug.Log("Starting node " + EventName);
         if (EndAfter == 0) {
             NarratorEventManager.Instance.StartFailTimer(Audio[0].length);
-        } else {
+        } else if (EndAfter > 0) { 
             NarratorEventManager.Instance.StartFailTimer(EndAfter);
         }
         if (eventObjects)
