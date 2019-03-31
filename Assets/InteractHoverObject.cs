@@ -17,19 +17,26 @@ public class InteractHoverObject : MonoBehaviour
 
     private void OnEnable() {
         if (!floating) return;
+        GetComponent<Rigidbody>().isKinematic = true;
         if (inFrontOfPlayer) {
             transform.position = Camera.main.transform.position + Camera.main.transform.forward * .2f;
         }
         interactable = GetComponent<VRTK_InteractableObject>();
         interactable.InteractableObjectGrabbed += ObjectGrabbed;
+        interactable.InteractableObjectUngrabbed += ObjectReleased;
         bob = transform.DOMoveY(transform.position.y + bobAmt, 1f).SetLoops(-1, LoopType.Yoyo);
         spin = transform.DORotate(transform.rotation.eulerAngles + new Vector3(0, 360), 2f).SetLoops(-1, LoopType.Restart);
     }
 
     private void ObjectGrabbed(object sender, InteractableObjectEventArgs e) {
+        GetComponent<Rigidbody>().isKinematic = false;
         floating = false;
         // Let the tween die, kill it if you have to.
         bob.Kill();
         spin.Kill();
+    }
+
+    private void ObjectReleased(object sender, InteractableObjectEventArgs e) {
+        GetComponent<Rigidbody>().isKinematic = false;
     }
 }

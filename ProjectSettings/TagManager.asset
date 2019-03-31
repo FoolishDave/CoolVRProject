@@ -10,6 +10,14 @@ TagManager:
   - DonutVoid
   - Donut
   - BaseCamera
+  - Doorway
+  - Rock
+  - Mysterious2
+  - MysteriousGive
+  - Accept Donut
+  - Gift Donut
+  - Rune
+  - Baby
   layers:
   - Default
   - TransparentFX

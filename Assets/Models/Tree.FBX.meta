@@ -1,20 +1,33 @@
 fileFormatVersion: 2
-guid: 61d947ef8682c2a46bfc6ce2e164cd60
+guid: 51ea67d7559f1e34e80786f29c64c73e
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: Tree_Trunk035
+    100004: TreeLeaves008
     400000: //RootNode
-    2100000: 'Material #17'
-    2300000: //RootNode
-    3300000: //RootNode
-    4300000: Rune001
+    400002: Tree_Trunk035
+    400004: TreeLeaves008
+    2100000: 03 - Default
+    2100002: 'Material #330'
+    2300000: Tree_Trunk035
+    2300002: TreeLeaves008
+    3300000: Tree_Trunk035
+    3300002: TreeLeaves008
+    4300000: Tree_Trunk035
+    4300002: TreeLeaves008
   externalObjects:
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: RuneBallTEXT
-    second: {fileID: 2800000, guid: af015c06c5d982e489b6579a1abc2a02, type: 3}
+      name: Tree_Leaves_DefaultMaterial_BaseColor
+    second: {fileID: 2800000, guid: 6b3d48a1d70f51e4c8fe769d2f029550, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tree_tree_DIFF
+    second: {fileID: 2800000, guid: 1d2d7ef26ba795b47983dcebf21855a7, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

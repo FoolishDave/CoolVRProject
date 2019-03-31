@@ -19,8 +19,8 @@ public class NarratorNode : NarratorBaseNode
 
     public string EventName;
     public List<AudioClip> Audio = new List<AudioClip>();
-    public string eventObjectTag;
-    public bool DisableOnComplete;
+    public string[] eventObjectTag;
+    public string[] disableObjects;
     public bool SimonSaid;
     public float EndAfter = 0f;
 
@@ -32,23 +32,31 @@ public class NarratorNode : NarratorBaseNode
     }
 
     public void Pass() {
-        if (eventObjects)
-            eventObjects.SetActive(!DisableOnComplete);
-        NarratorEventManager.Instance.StopFailTimer();
+        if (NarratorEventManager.Instance.narratorGraph.current != this) return;
+        Debug.Log("Succeeding from node " + EventName);
+        Cleanup();
         ((NarratorEventGraph)graph).current = (NarratorBaseNode)GetOutputPort("pass").Connection.node;
     }
 
     public void Fail() {
-        if (eventObjects)
-            eventObjects.SetActive(!DisableOnComplete);
-        NarratorEventManager.Instance.StopFailTimer();
+        if (NarratorEventManager.Instance.narratorGraph.current != this) return;
+        Debug.Log("Failing from node " + EventName);
+        Cleanup();
         PunishmentManager.Instance.AngerLevel += 1f;
         ((NarratorEventGraph)graph).current = (NarratorBaseNode)GetOutputPort("fail").Connection.node;
     }
 
+    public void Cleanup() {
+        foreach (string obj in disableObjects) {
+            Resources.FindObjectsOfTypeAll<GameObject>().Where(o => o.tag == obj).ToList().ForEach(o => o.SetActive(false));
+        }
+        NarratorEventManager.Instance.StopFailTimer();
+    }
+    
     public override void OnCurrent() {
-        if (eventObjectTag != "") {
-            eventObjects = Resources.FindObjectsOfTypeAll<Transform>().First(t => t.tag == eventObjectTag).gameObject;
+        Debug.LogFormat("Starting event node {0}", EventName);
+        foreach (string obj in eventObjectTag) {
+            Resources.FindObjectsOfTypeAll<GameObject>().Where(o => o.tag == obj).ToList().ForEach(o => o.SetActive(true));
         }
         Debug.Log("Starting node " + EventName);
         if (EndAfter == 0) {
@@ -56,8 +64,6 @@ public class NarratorNode : NarratorBaseNode
         } else if (EndAfter > 0) { 
             NarratorEventManager.Instance.StartFailTimer(EndAfter);
         }
-        if (eventObjects)
-            eventObjects.SetActive(true);
         if (Audio.Count > 0)
             NarratorEventManager.Instance.audioSource.PlayOneShot(Audio[UnityEngine.Random.Range(0,Audio.Count)]);
     }

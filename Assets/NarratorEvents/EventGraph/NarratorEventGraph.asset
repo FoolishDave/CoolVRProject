@@ -38,7 +38,6 @@ MonoBehaviour:
   - {fileID: 114586094110534170}
   - {fileID: 114593627173161516}
   - {fileID: 114984518669444982}
-  - {fileID: 114372735530054666}
   - {fileID: 114920996227386178}
   - {fileID: 114515347056977994}
   - {fileID: 114005022736043886}
@@ -48,7 +47,6 @@ MonoBehaviour:
   - {fileID: 114213909859688438}
   - {fileID: 114693973772393082}
   - {fileID: 114213382046630564}
-  - {fileID: 114182674888045410}
   - {fileID: 114369239575472156}
   - {fileID: 114915406834096714}
   - {fileID: 114127166007982320}
@@ -127,8 +125,8 @@ MonoBehaviour:
   EventName: Try Again
   Audio:
   - {fileID: 8300000, guid: 95ef3a60b635b044c8147428e4787258, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114014799901649124
@@ -193,8 +191,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114039559788812032
@@ -259,8 +257,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: 0e1ac0503afa2f1459dfe6dc6e447b75, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114044595109255998
@@ -316,8 +314,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: 2536125cf284b534d9de795e6e66ad7c, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114068460022519196
@@ -382,8 +380,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: b0f4c1f3812cf134b978211397d0a244, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114073158605231818
@@ -454,8 +452,9 @@ MonoBehaviour:
   EventName: Pick Up Donut
   Audio:
   - {fileID: 8300000, guid: ec32b43e221bd5e409973c799c9dcfca, type: 3}
-  eventObjectTag: Donut
-  DisableOnComplete: 0
+  eventObjectTag:
+  - Donut
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 10
 --- !u!114 &114073838821842284
@@ -496,7 +495,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114082861412381212}
+        node: {fileID: 114593627173161516}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -508,7 +507,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114082861412381212}
+        node: {fileID: 114593627173161516}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -516,8 +515,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114076916783643826
@@ -579,8 +578,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: 3bee1aefe2a7fa5408e803f81fd22ee8, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114082861412381212
@@ -596,7 +595,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1624, y: 104}
+  position: {x: 2120, y: 200}
   ports:
     keys:
     - previousEvent
@@ -609,10 +608,10 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: pass
-        node: {fileID: 114073838821842284}
+        node: {fileID: 114984518669444982}
         reroutePoints: []
       - fieldName: fail
-        node: {fileID: 114073838821842284}
+        node: {fileID: 114984518669444982}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -642,11 +641,11 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  EventName: Throw Donut in Void
+  EventName: Give Donut
   Audio:
-  - {fileID: 8300000, guid: 41d2b3d12810a544e8d88f6c1db1c295, type: 3}
-  eventObjectTag: DonutVoid
-  DisableOnComplete: 0
+  - {fileID: 8300000, guid: dd63be6838b1a9242b57cb24d26a41b9, type: 3}
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 10
 --- !u!114 &114094331203350662
@@ -747,8 +746,9 @@ MonoBehaviour:
   EventName: No Donut
   Audio:
   - {fileID: 8300000, guid: 3bee1aefe2a7fa5408e803f81fd22ee8, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects:
+  - Gift Donut
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114129207158918580
@@ -813,8 +813,8 @@ MonoBehaviour:
   EventName: Simon Lamp
   Audio:
   - {fileID: 8300000, guid: 20180c7ff8e0fe545813fcc62aafbb70, type: 3}
-  eventObjectTag: Lamp
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114140008530854426
@@ -880,8 +880,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: edccf6f18ad65504cb22f1d9c4940c24, type: 3}
   - {fileID: 8300000, guid: 0d2ee8e648757b34b8d638cdea74b23f, type: 3}
   - {fileID: 8300000, guid: 87298d8640e2c8841aa78518424716a6, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114144217532208054
@@ -946,8 +946,8 @@ MonoBehaviour:
   EventName: Travel Right
   Audio:
   - {fileID: 8300000, guid: 37e2fd389e9bc584181a33c35a88d7da, type: 3}
-  eventObjectTag: Travel Right
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1
 --- !u!114 &114164032382373526
@@ -1012,72 +1012,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
---- !u!114 &114182674888045410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
-  m_Name: Narrator Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -472, y: 1016}
-  ports:
-    keys:
-    - previousEvent
-    - pass
-    - fail
-    values:
-    - _fieldName: previousEvent
-      _node: {fileID: 114182674888045410}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: pass
-        node: {fileID: 114213382046630564}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: pass
-      _node: {fileID: 114182674888045410}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: previousEvent
-        node: {fileID: 114915406834096714}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: fail
-      _node: {fileID: 114182674888045410}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: previousEvent
-        node: {fileID: 114915406834096714}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  EventName: Simon Success
-  Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
-  SimonSaid: 0
-  EndAfter: 0.1
 --- !u!114 &114184143700186086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,8 +1069,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: 44e9081c0d6f8444b8e0265d6351aa40, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114190738041235514
@@ -1166,6 +1104,12 @@ MonoBehaviour:
       - fieldName: fail
         node: {fileID: 114342606154346632}
         reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114366982512868074}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114366982512868074}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1197,8 +1141,8 @@ MonoBehaviour:
   EventName: Simon Doorway
   Audio:
   - {fileID: 8300000, guid: daa45db786a9852429dabc37a0413d84, type: 3}
-  eventObjectTag: Doorway
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114200282529737032
@@ -1231,6 +1175,12 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: fail
         node: {fileID: 114127166007982320}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114759184446739572}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114759184446739572}
         reroutePoints: []
       - fieldName: pass
         node: {fileID: 114915406834096714}
@@ -1266,8 +1216,8 @@ MonoBehaviour:
   EventName: Travel to frank
   Audio:
   - {fileID: 8300000, guid: bca4ba5c638b94048a693e4347b70095, type: 3}
-  eventObjectTag: Frank Island
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1
 --- !u!114 &114204234733340020
@@ -1332,8 +1282,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114213382046630564
@@ -1368,10 +1318,10 @@ MonoBehaviour:
         node: {fileID: 114213909859688438}
         reroutePoints: []
       - fieldName: pass
-        node: {fileID: 114693973772393082}
+        node: {fileID: 114369239575472156}
         reroutePoints: []
       - fieldName: fail
-        node: {fileID: 114693973772393082}
+        node: {fileID: 114369239575472156}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1383,7 +1333,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114182674888045410}
+        node: {fileID: 114915406834096714}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1404,8 +1354,9 @@ MonoBehaviour:
   EventName: Stand By Rock
   Audio:
   - {fileID: 8300000, guid: 4e611a5bd073e2a4d9e41c04c8581737, type: 3}
-  eventObjectTag: Rock
-  DisableOnComplete: 0
+  eventObjectTag:
+  - Rock
+  disableObjects: []
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114213909859688438
@@ -1466,8 +1417,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114219463427524742
@@ -1538,8 +1489,9 @@ MonoBehaviour:
   EventName: Simon Donut
   Audio:
   - {fileID: 8300000, guid: 846377ba0c7262c4db89ad682341edb7, type: 3}
-  eventObjectTag: Donut
-  DisableOnComplete: 0
+  eventObjectTag:
+  - Donut
+  disableObjects: []
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114326521173883378
@@ -1604,8 +1556,9 @@ MonoBehaviour:
   EventName: Simon Red Block
   Audio:
   - {fileID: 8300000, guid: 1dc8a6e8dd6208949bd18184146ed6c2, type: 3}
-  eventObjectTag: RedBlock
-  DisableOnComplete: 0
+  eventObjectTag:
+  - RedBlock
+  disableObjects: []
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114342606154346632
@@ -1666,8 +1619,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114347882990250292
@@ -1732,8 +1685,8 @@ MonoBehaviour:
   EventName: Do Not Sac
   Audio:
   - {fileID: 8300000, guid: 3d08f3f508c243045a56e2accde77ea5, type: 3}
-  eventObjectTag: Baby
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1
 --- !u!114 &114366982512868074
@@ -1774,7 +1727,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114190738041235514}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1786,7 +1739,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114190738041235514}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1798,8 +1751,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114369239575472156
@@ -1815,7 +1768,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -472, y: 1272}
+  position: {x: -488, y: 1304}
   ports:
     keys:
     - previousEvent
@@ -1840,7 +1793,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114915406834096714}
+        node: {fileID: 114213382046630564}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1852,7 +1805,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114915406834096714}
+        node: {fileID: 114213382046630564}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1864,8 +1817,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114369366684106014
@@ -1930,74 +1883,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: 4874422880fe77f4e811d779949d0a40, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
-  SimonSaid: 0
-  EndAfter: 0
---- !u!114 &114372735530054666
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ceee6d148fa5d14c9a02bd6807590ed, type: 3}
-  m_Name: Narrator Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2360, y: 504}
-  ports:
-    keys:
-    - previousEvent
-    - pass
-    - fail
-    values:
-    - _fieldName: previousEvent
-      _node: {fileID: 114372735530054666}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: fail
-        node: {fileID: 114593627173161516}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: pass
-      _node: {fileID: 114372735530054666}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: previousEvent
-        node: {fileID: 114920996227386178}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: fail
-      _node: {fileID: 114372735530054666}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: previousEvent
-        node: {fileID: 114920996227386178}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  EventName: Simon Failure
-  Audio:
-  - {fileID: 8300000, guid: f2a89a7106cc03b4cb666f82c8893032, type: 3}
-  - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
-  - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
-  - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114376945792264844
@@ -2058,8 +1945,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114425818227026226
@@ -2120,8 +2007,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Non Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114455142052951212
@@ -2189,8 +2076,8 @@ MonoBehaviour:
   EventName: Welcome
   Audio:
   - {fileID: 8300000, guid: 57059c479782d65418a3260d50e91ba0, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114456475934697936
@@ -2251,8 +2138,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114492684932026152
@@ -2317,8 +2204,8 @@ MonoBehaviour:
   EventName: Reward
   Audio:
   - {fileID: 8300000, guid: 242d4cd48a44761418a7eff90c738314, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114501827131551548
@@ -2379,8 +2266,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114515347056977994
@@ -2445,8 +2332,8 @@ MonoBehaviour:
   EventName: Admire Tree
   Audio:
   - {fileID: 8300000, guid: ca20e145b2cc4074c800f9142ce61bc7, type: 3}
-  eventObjectTag: Tree
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114586094110534170
@@ -2462,7 +2349,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1864, y: 216}
+  position: {x: 2360, y: 312}
   ports:
     keys:
     - previousEvent
@@ -2487,7 +2374,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2499,7 +2386,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2512,8 +2399,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: edccf6f18ad65504cb22f1d9c4940c24, type: 3}
   - {fileID: 8300000, guid: 0d2ee8e648757b34b8d638cdea74b23f, type: 3}
   - {fileID: 8300000, guid: 87298d8640e2c8841aa78518424716a6, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114593627173161516
@@ -2529,7 +2416,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2104, y: 408}
+  position: {x: 1624, y: 248}
   ports:
     keys:
     - previousEvent
@@ -2542,28 +2429,16 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: pass
-        node: {fileID: 114781385265889488}
+        node: {fileID: 114073838821842284}
         reroutePoints: []
       - fieldName: fail
-        node: {fileID: 114781385265889488}
-        reroutePoints: []
-      - fieldName: pass
-        node: {fileID: 114586094110534170}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114586094110534170}
+        node: {fileID: 114073838821842284}
         reroutePoints: []
       - fieldName: pass
         node: {fileID: 114164032382373526}
         reroutePoints: []
       - fieldName: fail
         node: {fileID: 114164032382373526}
-        reroutePoints: []
-      - fieldName: pass
-        node: {fileID: 114366982512868074}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114366982512868074}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -2587,7 +2462,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114372735530054666}
+        node: {fileID: 114984518669444982}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2596,10 +2471,10 @@ MonoBehaviour:
   EventName: Travel To Island
   Audio:
   - {fileID: 8300000, guid: bd7510f564161644594b210a805c1ba8, type: 3}
-  eventObjectTag: First Island
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
-  EndAfter: 10
+  EndAfter: -1
 --- !u!114 &114598515459105576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2658,8 +2533,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114611076496485342
@@ -2724,8 +2599,8 @@ MonoBehaviour:
   EventName: Frank
   Audio:
   - {fileID: 8300000, guid: b2b28c7108052494f8e6ec59d8733ea0, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114641394915880286
@@ -2790,8 +2665,8 @@ MonoBehaviour:
   EventName: Intro
   Audio:
   - {fileID: 8300000, guid: f59f4fafea5a9dc4aa332c0c4a8238ae, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114642545597471250
@@ -2807,7 +2682,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 3384, y: 600}
+  position: {x: 3464, y: 552}
   ports:
     keys:
     - previousEvent
@@ -2847,8 +2722,8 @@ MonoBehaviour:
   EventName: Doom
   Audio:
   - {fileID: 8300000, guid: 46dbcba875a61964089b1132aae8a4b8, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114693973772393082
@@ -2889,7 +2764,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114213382046630564}
+        node: {fileID: 114780249353601638}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2901,7 +2776,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114213382046630564}
+        node: {fileID: 114780249353601638}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -2913,8 +2788,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114737133740749090
@@ -2985,8 +2860,8 @@ MonoBehaviour:
   EventName: Red Block Down
   Audio:
   - {fileID: 8300000, guid: 3800a4b78e099864aa3af4e3a10ebbcf, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 5
 --- !u!114 &114759184446739572
@@ -3027,7 +2902,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114996949066421758}
+        node: {fileID: 114200282529737032}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3039,7 +2914,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114996949066421758}
+        node: {fileID: 114200282529737032}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3051,8 +2926,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d5d6d6581c4e173418d0699bcc2b4bb9, type: 3}
   - {fileID: 8300000, guid: 6f9f8bd6b7cc40945ac63222b86f6ba4, type: 3}
   - {fileID: 8300000, guid: a2b310f95aba11c4e957527eb519580f, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114780249353601638
@@ -3086,6 +2961,12 @@ MonoBehaviour:
       - fieldName: fail
         node: {fileID: 114515347056977994}
         reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114693973772393082}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114693973772393082}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -3117,8 +2998,8 @@ MonoBehaviour:
   EventName: Travel To Big Island
   Audio:
   - {fileID: 8300000, guid: 3c4a4d3e2fff914419f62e1e7f28ffe2, type: 3}
-  eventObjectTag: Big Island
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1
 --- !u!114 &114781385265889488
@@ -3134,7 +3015,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1864, y: -40}
+  position: {x: 2360, y: 56}
   ports:
     keys:
     - previousEvent
@@ -3159,7 +3040,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3171,7 +3052,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114593627173161516}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3179,8 +3060,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Non Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114799050880165726
@@ -3238,8 +3119,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Intro Delay
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 1
 --- !u!114 &114876749783914448
@@ -3301,8 +3182,8 @@ MonoBehaviour:
   EventName: Rune Fail
   Audio:
   - {fileID: 8300000, guid: 95ef3a60b635b044c8147428e4787258, type: 3}
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114910945737893516
@@ -3357,8 +3238,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Control Room
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0
 --- !u!114 &114915406834096714
@@ -3374,7 +3255,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: 1160}
+  position: {x: -232, y: 1032}
   ports:
     keys:
     - previousEvent
@@ -3387,16 +3268,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: pass
-        node: {fileID: 114182674888045410}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114182674888045410}
-        reroutePoints: []
-      - fieldName: pass
-        node: {fileID: 114369239575472156}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114369239575472156}
+        node: {fileID: 114213382046630564}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3429,8 +3301,11 @@ MonoBehaviour:
   EventName: Accept Donut
   Audio:
   - {fileID: 8300000, guid: e8834598efb4cfd45afce412fb8c1a25, type: 3}
-  eventObjectTag: Accept Donut
-  DisableOnComplete: 0
+  eventObjectTag:
+  - Accept Donut
+  - Gift Donut
+  disableObjects:
+  - Accept Donut
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114920996227386178
@@ -3458,17 +3333,17 @@ MonoBehaviour:
       _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
-      - fieldName: pass
-        node: {fileID: 114984518669444982}
-        reroutePoints: []
       - fieldName: fail
-        node: {fileID: 114984518669444982}
+        node: {fileID: 114586094110534170}
         reroutePoints: []
       - fieldName: pass
-        node: {fileID: 114372735530054666}
+        node: {fileID: 114586094110534170}
         reroutePoints: []
       - fieldName: fail
-        node: {fileID: 114372735530054666}
+        node: {fileID: 114781385265889488}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114781385265889488}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3501,8 +3376,8 @@ MonoBehaviour:
   EventName: Travel Right
   Audio:
   - {fileID: 8300000, guid: 37e2fd389e9bc584181a33c35a88d7da, type: 3}
-  eventObjectTag: Travel Right
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1
 --- !u!114 &114984518669444982
@@ -3518,7 +3393,7 @@ MonoBehaviour:
   m_Name: Narrator Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2360, y: 248}
+  position: {x: 1848, y: 264}
   ports:
     keys:
     - previousEvent
@@ -3533,6 +3408,9 @@ MonoBehaviour:
       - fieldName: pass
         node: {fileID: 114593627173161516}
         reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114593627173161516}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -3543,7 +3421,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114920996227386178}
+        node: {fileID: 114082861412381212}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3555,7 +3433,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114920996227386178}
+        node: {fileID: 114082861412381212}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -3563,8 +3441,8 @@ MonoBehaviour:
       _dynamic: 0
   EventName: Simon Success
   Audio: []
-  eventObjectTag: 
-  DisableOnComplete: 0
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 0
   EndAfter: 0.1
 --- !u!114 &114996949066421758
@@ -3597,12 +3475,6 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: fail
         node: {fileID: 114598515459105576}
-        reroutePoints: []
-      - fieldName: pass
-        node: {fileID: 114759184446739572}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114759184446739572}
         reroutePoints: []
       - fieldName: pass
         node: {fileID: 114876749783914448}
@@ -3639,9 +3511,8 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   EventName: Purple Runes
-  Audio:
-  - {fileID: 8300000, guid: ef9261f06dd65344bad76df253a19d22, type: 3}
-  eventObjectTag: Purple Runes
-  DisableOnComplete: 0
+  Audio: []
+  eventObjectTag: []
+  disableObjects: []
   SimonSaid: 1
   EndAfter: -1

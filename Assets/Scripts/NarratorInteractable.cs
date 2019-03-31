@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,7 +16,7 @@ public class NarratorInteractable : MonoBehaviour
     }
 
     public void Activate() {
-        if (((NarratorNode)NarratorEventManager.Instance.narratorGraph.current).eventObjectTag == gameObject.tag) {
+        if (((NarratorNode)NarratorEventManager.Instance.narratorGraph.current).eventObjectTag.Contains(gameObject.tag)) {
             used = true;
             onActivate.Invoke();
         }

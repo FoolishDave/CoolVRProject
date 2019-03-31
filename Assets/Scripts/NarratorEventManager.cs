@@ -37,6 +37,12 @@ public class NarratorEventManager : MonoBehaviour
 
     public void StopFailTimer() {
         StopCoroutine(failTimerRoutine);
+        failTimerRoutine = null;
+    }
+
+    public void SetToNode(NarratorNode node) {
+        node.Cleanup();
+        narratorGraph.current = node;
     }
 
     public void PlayerDidAction() {
