@@ -18,6 +18,8 @@ TagManager:
   - Gift Donut
   - Rune
   - Baby
+  - LampDestination
+  - RuneDestination
   layers:
   - Default
   - TransparentFX

@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using XNode;
 
 public class NarratorEventManager : MonoBehaviour
 {
     public static NarratorEventManager Instance;
 
     public NarratorEventGraph narratorGraph;
+    private NarratorEventGraph baseGraph;
 
     public AudioSource audioSource;
     private Coroutine failTimerRoutine;
@@ -19,7 +21,8 @@ public class NarratorEventManager : MonoBehaviour
             return;
         }
 
-        narratorGraph = (NarratorEventGraph)narratorGraph.Copy();
+        baseGraph = narratorGraph;
+        narratorGraph = (NarratorEventGraph)baseGraph.Copy();
         narratorGraph.current = (NarratorBaseNode)narratorGraph.nodes[0];
     }
 
@@ -32,17 +35,19 @@ public class NarratorEventManager : MonoBehaviour
     }
     
     public void StartFailTimer(float time) {
-        failTimerRoutine = StartCoroutine(failTimer(time));
+        failTimerRoutine = StartCoroutine(((NarratorNode)narratorGraph.current).failTimer(time));
     }
 
     public void StopFailTimer() {
-        StopCoroutine(failTimerRoutine);
-        failTimerRoutine = null;
+        if (failTimerRoutine != null) {
+            StopCoroutine(failTimerRoutine);
+            failTimerRoutine = null;
+        }
     }
 
     public void SetToNode(NarratorNode node) {
         node.Cleanup();
-        narratorGraph.current = node;
+        narratorGraph.current = (NarratorNode)narratorGraph.nodes[baseGraph.nodes.IndexOf(node)];
     }
 
     public void PlayerDidAction() {
@@ -57,13 +62,5 @@ public class NarratorEventManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R)) {
             SceneManager.LoadScene(0);
         }
-    }
-
-    IEnumerator failTimer(float time) {
-        yield return new WaitForSeconds(time);
-        if (((NarratorNode)narratorGraph.current).SimonSaid)
-            FailEvent();
-        else
-            PassEvent();
     }
 }

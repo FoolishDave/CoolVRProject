@@ -54,18 +54,35 @@ public class NarratorNode : NarratorBaseNode
     }
     
     public override void OnCurrent() {
-        Debug.LogFormat("Starting event node {0}", EventName);
         foreach (string obj in eventObjectTag) {
             Resources.FindObjectsOfTypeAll<GameObject>().Where(o => o.tag == obj).ToList().ForEach(o => o.SetActive(true));
         }
-        Debug.Log("Starting node " + EventName);
-        if (EndAfter == 0) {
-            NarratorEventManager.Instance.StartFailTimer(Audio[0].length);
-        } else if (EndAfter > 0) { 
+        if (EndAfter > 0) { 
             NarratorEventManager.Instance.StartFailTimer(EndAfter);
         }
-        if (Audio.Count > 0)
-            NarratorEventManager.Instance.audioSource.PlayOneShot(Audio[UnityEngine.Random.Range(0,Audio.Count)]);
+        if (Audio.Count > 0) {
+            NarratorEventManager.Instance.audioSource.clip = Audio[UnityEngine.Random.Range(0, Audio.Count)];
+            if (EndAfter == 0) {
+                NarratorEventManager.Instance.StartFailTimer(NarratorEventManager.Instance.audioSource.clip.length);
+            }
+            NarratorEventManager.Instance.audioSource.time = 0;
+            NarratorEventManager.Instance.audioSource.Play();
+        }
+    }
+
+    public override object GetValue(NodePort port) {
+        if (port.IsConnected)
+            return port.Connection.node;
+        else
+            return "Disconnected";
+    }
+
+    public IEnumerator failTimer(float time) {
+        yield return new WaitForSeconds(time);
+        if (SimonSaid)
+            Fail();
+        else
+            Pass();
     }
 }
 

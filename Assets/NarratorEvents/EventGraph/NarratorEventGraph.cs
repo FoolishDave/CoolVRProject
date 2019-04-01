@@ -14,8 +14,10 @@ public class NarratorEventGraph : NodeGraph {
         }
         set
         {
-            Debug.Log("Node changed to " + ((NarratorNode)value).EventName);
             _current = value;
+            if (_current is NarratorNode) {
+                Debug.Log("New event: " + ((NarratorNode)_current).EventName);
+            }
             if (_current != null)
                 _current.OnCurrent();
             else {
