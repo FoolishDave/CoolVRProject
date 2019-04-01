@@ -62,17 +62,16 @@ MonoBehaviour:
   - {fileID: 114611076496485342}
   - {fileID: 114184143700186086}
   - {fileID: 114044595109255998}
-  - {fileID: 114929645569007306}
-  - {fileID: 114895510714710348}
   - {fileID: 114617616297337152}
   - {fileID: 114330248844182462}
-  - {fileID: 114388359505949574}
+  - {fileID: 114841730457467106}
+  - {fileID: 114925324160486068}
   - {fileID: 114880221313435050}
   - {fileID: 114748922534544400}
-  - {fileID: 114610509211799242}
-  - {fileID: 114925324160486068}
   - {fileID: 114899565107410970}
-  - {fileID: 114841730457467106}
+  - {fileID: 114610509211799242}
+  - {fileID: 114388359505949574}
+  - {fileID: 114895510714710348}
   - {fileID: 0}
 --- !u!114 &114005022736043886
 MonoBehaviour:
@@ -130,7 +129,7 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 0
-  EventName: Try Again
+  EventName: 
   Audio:
   - {fileID: 8300000, guid: 95ef3a60b635b044c8147428e4787258, type: 3}
   eventObjectTag: []
@@ -294,6 +293,9 @@ MonoBehaviour:
       _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
+      - fieldName: falseKey
+        node: {fileID: 0}
+        reroutePoints: []
       - fieldName: falseKey
         node: {fileID: 114841730457467106}
         reroutePoints: []
@@ -615,6 +617,9 @@ MonoBehaviour:
       _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       connections:
+      - fieldName: trueKey
+        node: {fileID: 0}
+        reroutePoints: []
       - fieldName: trueKey
         node: {fileID: 114880221313435050}
         reroutePoints: []
@@ -1049,6 +1054,9 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: trueKey
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: trueKey
         node: {fileID: 114841730457467106}
         reroutePoints: []
       _direction: 0
@@ -1112,6 +1120,9 @@ MonoBehaviour:
         node: {fileID: 114366982512868074}
         reroutePoints: []
       - fieldName: nextEvent
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: nextEvent
         node: {fileID: 114748922534544400}
         reroutePoints: []
       _direction: 0
@@ -1147,7 +1158,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: daa45db786a9852429dabc37a0413d84, type: 3}
   eventObjectTag:
   - Doorway
-  disableObjects: []
+  disableObjects:
+  - Doorway
   SimonSaid: 1
   EndAfter: 10
 --- !u!114 &114200282529737032
@@ -1188,10 +1200,16 @@ MonoBehaviour:
         node: {fileID: 114759184446739572}
         reroutePoints: []
       - fieldName: nextEvent
-        node: {fileID: 114899565107410970}
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: falseKey
+        node: {fileID: 0}
         reroutePoints: []
       - fieldName: falseKey
         node: {fileID: 114925324160486068}
+        reroutePoints: []
+      - fieldName: nextEvent
+        node: {fileID: 114899565107410970}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -1325,6 +1343,9 @@ MonoBehaviour:
       - fieldName: fail
         node: {fileID: 114213909859688438}
         reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114213382046630564}
+        reroutePoints: []
       _direction: 0
       _connectionType: 0
       _typeConstraint: 0
@@ -1345,7 +1366,10 @@ MonoBehaviour:
       _node: {fileID: 114213382046630564}
       _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      connections: []
+      connections:
+      - fieldName: previousEvent
+        node: {fileID: 114213382046630564}
+        reroutePoints: []
       _direction: 1
       _connectionType: 0
       _typeConstraint: 0
@@ -1450,6 +1474,9 @@ MonoBehaviour:
         reroutePoints: []
       - fieldName: fail
         node: {fileID: 114425818227026226}
+        reroutePoints: []
+      - fieldName: nextEvent
+        node: {fileID: 0}
         reroutePoints: []
       - fieldName: nextEvent
         node: {fileID: 114610509211799242}
@@ -1595,7 +1622,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114929645569007306}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1607,7 +1634,7 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: previousEvent
-        node: {fileID: 114929645569007306}
+        node: {fileID: 114920996227386178}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -1958,7 +1985,7 @@ MonoBehaviour:
   m_Name: Save Prefs Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2584, y: 120}
+  position: {x: 2616, y: 136}
   ports:
     keys:
     - previousEvent
@@ -2527,7 +2554,7 @@ MonoBehaviour:
   m_Name: Save Prefs Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 584, y: 712}
+  position: {x: 616, y: 760}
   ports:
     keys:
     - previousEvent
@@ -3215,7 +3242,7 @@ MonoBehaviour:
   m_Name: Prefs Condition Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 2760, y: 1336}
+  position: {x: 2744, y: 1304}
   ports:
     keys:
     - previousEvent
@@ -3338,7 +3365,7 @@ MonoBehaviour:
   m_Name: Prefs Condition Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 1992, y: 536}
+  position: {x: 2088, y: 568}
   ports:
     keys:
     - previousEvent
@@ -3443,7 +3470,7 @@ MonoBehaviour:
   m_Name: Save Prefs Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 24, y: 952}
+  position: {x: -8, y: 1016}
   ports:
     keys:
     - previousEvent
@@ -3557,6 +3584,9 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: trueKey
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: trueKey
         node: {fileID: 114925324160486068}
         reroutePoints: []
       _direction: 0
@@ -3623,13 +3653,25 @@ MonoBehaviour:
         PublicKeyToken=null
       connections:
       - fieldName: nextEvent
-        node: {fileID: 114929645569007306}
+        node: {fileID: 0}
         reroutePoints: []
       - fieldName: nextEvent
-        node: {fileID: 114388359505949574}
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: falseKey
+        node: {fileID: 0}
+        reroutePoints: []
+      - fieldName: pass
+        node: {fileID: 114330248844182462}
+        reroutePoints: []
+      - fieldName: fail
+        node: {fileID: 114330248844182462}
         reroutePoints: []
       - fieldName: falseKey
         node: {fileID: 114880221313435050}
+        reroutePoints: []
+      - fieldName: nextEvent
+        node: {fileID: 114388359505949574}
         reroutePoints: []
       _direction: 0
       _connectionType: 0
@@ -3679,7 +3721,7 @@ MonoBehaviour:
   m_Name: Prefs Condition Node
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -312, y: 1400}
+  position: {x: -296, y: 1528}
   ports:
     keys:
     - previousEvent
@@ -3723,54 +3765,6 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   key: gaveDonut
---- !u!114 &114929645569007306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86f20a6d781ac9b4c8498cd6c9055c0e, type: 3}
-  m_Name: Save Prefs Node
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 2584, y: 648}
-  ports:
-    keys:
-    - previousEvent
-    - nextEvent
-    values:
-    - _fieldName: previousEvent
-      _node: {fileID: 114929645569007306}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: pass
-        node: {fileID: 114330248844182462}
-        reroutePoints: []
-      - fieldName: fail
-        node: {fileID: 114330248844182462}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextEvent
-      _node: {fileID: 114929645569007306}
-      _typeQualifiedName: Empty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: previousEvent
-        node: {fileID: 114920996227386178}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  key: gaveDonut
-  value: 0
 --- !u!114 &114984518669444982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3905,6 +3899,7 @@ MonoBehaviour:
   Audio: []
   eventObjectTag:
   - RuneDestination
-  disableObjects: []
+  disableObjects:
+  - RuneDestination
   SimonSaid: 1
   EndAfter: -1
